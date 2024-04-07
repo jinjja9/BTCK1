@@ -165,7 +165,7 @@ public class MainController {
         try {
             WritableImage writableImage = centerPane.snapshot(new SnapshotParameters(), null);
             File file = new FileChooser().showSaveDialog(null);
-            if (file != null) { // Kiểm tra xem file có null hay không
+            if (file != null) {
                 ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
                 showAlert("Ảnh đã được lưu vào: " + file.getAbsolutePath(), Alert.AlertType.INFORMATION);
             } else {

@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserFileHandler { //viết và đọc từ file
+public class UserFileHandler {
     private static final String FILE_PATH = "users.dat";
 
     public static void saveUsers(List<User> users) {

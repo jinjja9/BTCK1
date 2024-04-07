@@ -39,9 +39,7 @@ public class ShoesManager {
                 imageView.setFitWidth(140);
                 imageView.setFitHeight(80);
 
-                // Gắn sự kiện nhấp chuột
                 imageView.setOnMouseClicked(event -> {
-                    // Hiển thị ảnh trong ImageView shoesModel khi nhấp chuột vào ảnh
                     shoesModel.setImage(image);
                 });
 

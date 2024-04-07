@@ -10,12 +10,9 @@ import java.io.File;
 
 public class ShirtManager {
 
-//    public ObservableList<Image> getShirtImages() {
-//        return shirtImages;
-//    }
     private ObservableList<Image> shirtImages = FXCollections.observableArrayList();
     private GridPane shirtsGridPane;
-    private ImageView shirtmodel; // Thêm biến shirtmodel vào lớp
+    private ImageView shirtmodel;
 
     public void setShirtModel(ImageView shirtmodel) {
         this.shirtmodel = shirtmodel;
@@ -31,7 +28,7 @@ public class ShirtManager {
         updateShirtGrid();
     }
     void updateShirtGrid() {
-        if (shirtsGridPane != null) { // Kiểm tra xem shirtsGridPane có null không
+        if (shirtsGridPane != null) {
             shirtsGridPane.getChildren().clear();
 
             int col = 0;
@@ -41,9 +38,7 @@ public class ShirtManager {
                 imageView.setFitWidth(200);
                 imageView.setFitHeight(200);
 
-                // Gắn sự kiện nhấp chuột
                 imageView.setOnMouseClicked(event -> {
-                    // Hiển thị ảnh trong ImageView shirtmodel khi nhấp chuột vào ảnh
                     shirtmodel.setImage(image);
                 });
 

@@ -41,9 +41,7 @@ public class PantsManager {
                 imageView.setFitWidth(200);
                 imageView.setFitHeight(200);
 
-                // Add mouse click event to display the image in the shirtmodel ImageView when clicked
                 imageView.setOnMouseClicked(event -> {
-                    // Display the image in the shirtmodel ImageView when clicked
                     pantmodel.setImage(image);
                 });
 
