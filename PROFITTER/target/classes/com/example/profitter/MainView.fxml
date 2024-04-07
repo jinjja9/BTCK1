@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="946.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.MainController">
+    <top>
+        <MenuBar prefHeight="19.0" prefWidth="946.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addFaceAction" text="Add Face" />
+                        <MenuItem mnemonicParsing="false" onAction="#savePhoto" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeMainView" text="Close">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Q" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="addShirtMenuItem" mnemonicParsing="false" onAction="#addShirtAction" text="Add Shirt" />
+                        <MenuItem mnemonicParsing="false" onAction="#addPantsAction" text="Add Pant" />
+                        <MenuItem mnemonicParsing="false" onAction="#addShoesAction" text="Add Shoes" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Khó cứu:((" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <right>
+        <Pane>
+            <children>
+                <ScrollPane prefHeight="570.0" prefWidth="238.0">
+                    <content>
+                        <GridPane fx:id="pantsGridPane" prefHeight="570.0" prefWidth="238.0">
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+    </right>
+    <center>
+        <Pane fx:id="centerPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="Model" fitHeight="571.0" fitWidth="471.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Photos/model.gif" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="shoesmodel" fitHeight="80.0" fitWidth="112.0" layoutX="182.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="facemodel" fitHeight="90.0" fitWidth="94.0" layoutX="187.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="pantmodel" fitHeight="245.0" fitWidth="197.0" layoutX="140.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="shirtmodel" fitHeight="185.0" fitWidth="192.0" layoutX="144.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </Pane>
+    </center>
+    <left>
+        <Pane prefHeight="570.0" prefWidth="238.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane prefHeight="570.0" prefWidth="238.0">
+                    <content>
+                        <GridPane fx:id="shirtsGridPane" prefHeight="570.0" prefWidth="241.0">
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+    </left>
+    <bottom>
+        <Pane prefHeight="100.0" prefWidth="912.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane prefHeight="100.0" prefWidth="946.0">
+                    <content>
+                        <GridPane fx:id="shoesGridPane" hgap="5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="945.0" vgap="5">
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+    </bottom>
+
+
+</BorderPane>
