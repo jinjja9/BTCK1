@@ -23,7 +23,7 @@ Link Video Demo:
 
 ## Features
 
-** Các chức năng chính của ứng dụng:**
+**Các chức năng chính của ứng dụng:**
 
 + Tích hợp chức năng đăng nhập, với tài khoản mặc định cho admin là admin/admin và cho user phải đăng ký mới có thể sử dụng.
 
